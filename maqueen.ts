@@ -16,7 +16,7 @@ enum PingUnit {
 
 //% weight=10 color=#008B00 icon="\uf136" block="maqueen"
 namespace maqueen {
-
+    /*
     export class Packeta {
         public mye: string;
         public myparam: number;
@@ -243,5 +243,5 @@ namespace maqueen {
         buf[1] = angle;
         pins.i2cWriteBuffer(0x10, buf);
     }
-
+    */
 }
