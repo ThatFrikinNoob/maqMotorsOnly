@@ -63,7 +63,7 @@ namespace maqueen {
         //% blockId="turnOff" block="turnOff"
         turnOff = 0x00
     }
-    */
+    
     //% advanced=true shim=maqueenIR::initIR
     function initIR(pin: Pins): void {
         return
@@ -243,5 +243,5 @@ namespace maqueen {
         buf[1] = angle;
         pins.i2cWriteBuffer(0x10, buf);
     }
-   
+    */
 }
