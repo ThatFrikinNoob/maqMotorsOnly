@@ -1,6 +1,6 @@
 #include "pxt.h"
 
-enum class DigitalPin {
+enum class DigitalPine {
     P0 = MICROBIT_ID_IO_P0,
     P1 = MICROBIT_ID_IO_P1,
     P2 = MICROBIT_ID_IO_P2,
@@ -22,7 +22,7 @@ enum class DigitalPin {
     P20 = MICROBIT_ID_IO_P20,
 };
 
-enum class AnalogPin {
+enum class AnalogPine {
     P0 = MICROBIT_ID_IO_P0,
     P1 = MICROBIT_ID_IO_P1,
     P2 = MICROBIT_ID_IO_P2,
