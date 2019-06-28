@@ -1,22 +1,6 @@
-let maqueencb: Action
-let maqueenmycb: Action
-let maqueene = "1"
-let maqueenparam = 0
-let alreadyInit = 0
-let IrPressEvent = 0
-const MOTER_ADDRESSS = 0x10
-
-enum PingUnit {
-    //% block="cm"
-    Centimeters,
-    //% block="μs"
-    MicroSeconds
-}
-
-
 //% weight=10 color=#008B00 icon="\uf136" block="maqueen"
 namespace maqueen {
-    /*
+    
     export class Packeta {
         public mye: string;
         public myparam: number;
@@ -131,20 +115,20 @@ namespace maqueen {
 
     //% blockId=ultrasonic_sensor block="sensor unit|%unit"
     //% weight=95
-    export function sensor(unit: PingUnit, maxCmDistance = 500): number {
+    /*export function sensor(unit: PingUnit, maxCmDistance = 500): number {
         // send pulse  basic.pause=sleep control.waitMicros=delay
-        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
-        pins.digitalWritePin(DigitalPin.P1, 0);
+        pins.setPull(8, PinPullMode.PullNone);
+        pins.digitalWritePin(7, 0);
         control.waitMicros(2);
-        pins.digitalWritePin(DigitalPin.P1, 1);
+        pins.digitalWritePin(7, 1);
         control.waitMicros(10);
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        pins.setPull(DigitalPin.P2, PinPullMode.PullUp);
+        pins.digitalWritePin(7, 0);
+        pins.setPull(7, PinPullMode.PullUp);
 
 
 
         // read pulse
-        let d = pins.pulseIn(DigitalPin.P2, PulseValue.High, maxCmDistance * 42);
+        let d = pins.pulseIn(9, PulseValue.High, maxCmDistance * 42);
         console.log("Distance: " + d / 42);
 
         basic.pause(50)
@@ -153,7 +137,7 @@ namespace maqueen {
             case PingUnit.Centimeters: return d / 42;
             default: return d;
         }
-    }
+    }*/
 
     //% weight=90
     //% blockId=motor_MotorRun block="Motor|%index|dir|%Dir|speed|%speed"
@@ -204,29 +188,29 @@ namespace maqueen {
     //% weight=20
     //% blockId=read_Patrol block="Read Patrol|%patrol"
     //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=2 
-    export function readPatrol(patrol: Patrol): number {
+    /*export function readPatrol(patrol: Patrol): number {
         if (patrol == Patrol.PatrolLeft) {
-            return pins.digitalReadPin(DigitalPin.P13)
+            return pins.digitalReadPin(20)
         } else if (patrol == Patrol.PatrolRight) {
-            return pins.digitalReadPin(DigitalPin.P14)
+            return pins.digitalReadPin(21)
         } else {
             return -1
         }
-    }
+    }*/
 
     //% weight=20
     //% blockId=writeLED block="led|%led|ledswitch|%ledswitch"
     //% led.fieldEditor="gridpicker" led.fieldOptions.columns=2 
     //% ledswitch.fieldEditor="gridpicker" ledswitch.fieldOptions.columns=2
-    export function writeLED(led: LED, ledswitch: LEDswitch): void {
+    /*export function writeLED(led: LED, ledswitch: LEDswitch): void {
         if (led == LED.LEDLeft) {
-            pins.digitalWritePin(DigitalPin.P8, ledswitch)
+            pins.digitalWritePin(15, ledswitch)
         } else if (led == LED.LEDRight) {
-            pins.digitalWritePin(DigitalPin.P12, ledswitch)
+            pins.digitalWritePin(19, ledswitch)
         } else {
             return
         }
-    }
+    }*/
 
     //% weight=90
     //% blockId=servo_ServoRun block="Servo|%index|angle|%angle"
@@ -243,5 +227,5 @@ namespace maqueen {
         buf[1] = angle;
         pins.i2cWriteBuffer(0x10, buf);
     }
-    */
+    
 }
