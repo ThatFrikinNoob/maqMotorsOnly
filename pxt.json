@@ -9,6 +9,7 @@
     "files": [
         "maqueen.ts",
         "enums.d.ts",
+        "pine.cpp",
         "_locales/zh/maqueen-strings.json"
     ],
     "testFiles": [
