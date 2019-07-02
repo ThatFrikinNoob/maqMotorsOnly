@@ -1,3 +1,18 @@
+let maqueencb: Action
+let maqueenmycb: Action
+let maqueene = "1"
+let maqueenparam = 0
+let alreadyInit = 0
+let IrPressEvent = 0
+const MOTER_ADDRESSS = 0x10
+
+enum PingUnit {
+    //% block="cm"
+    Centimeters,
+    //% block="μs"
+    MicroSeconds
+}
+
 //% weight=10 color=#008B00 icon="\uf136" block="maqueen"
 namespace maqueen {
     /*
