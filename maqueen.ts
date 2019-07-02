@@ -20,7 +20,7 @@ namespace maqueen {
         public mye: string;
         public myparam: number;
     }
-
+    */
     export enum aMotors {
         //% blockId="M1" block="M1"
         M1 = 0,
@@ -48,7 +48,7 @@ namespace maqueen {
         //% blockId="PatrolRight" block="PatrolRight"
         PatrolRight = 14
     }
-
+/*
     export enum LED {
         //% blockId="LEDLeft" block="LEDLeft"
         LEDLeft = 8,
@@ -127,7 +127,7 @@ namespace maqueen {
         IrPressEvent += 1
         onPressEvent(IrPressEvent, maqueencb)
     }
-    up up*/ 
+*/ 
     //% blockId=ultrasonic_sensor block="sensor unit|%unit"
     //% weight=95
     /*export function sensor(unit: PingUnit, maxCmDistance = 500): number {
@@ -159,7 +159,7 @@ namespace maqueen {
     //% speed.min=0 speed.max=255
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
     //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
- /*need this export function MotorRun(index: aMotors, direction: Dir, speed: number): void {
+ need this export function MotorRun(index: aMotors, direction: Dir, speed: number): void {
         let buf = pins.createBuffer(3);
         if (index == 0) {
             buf[0] = 0x00;
@@ -171,11 +171,11 @@ namespace maqueen {
         buf[2] = speed;
         pins.i2cWriteBuffer(0x10, buf);
     }
-    */
+    
     //% weight=20
     //% blockId=motor_motorStop block="Motor stop|%motors"
     //% motors.fieldEditor="gridpicker" motors.fieldOptions.columns=2 
-    /*export function motorStop(motors: aMotors): void {
+    export function motorStop(motors: aMotors): void {
         let buf = pins.createBuffer(3);
         if (motors == 0) {
             buf[0] = 0x00;
@@ -203,7 +203,7 @@ namespace maqueen {
     //% weight=20
     //% blockId=read_Patrol block="Read Patrol|%patrol"
     //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=2 
-    /*export function readPatrol(patrol: Patrol): number {
+    export function readPatrol(patrol: Patrol): number {
         if (patrol == Patrol.PatrolLeft) {
             return pins.digitalReadPin(20)
         } else if (patrol == Patrol.PatrolRight) {
@@ -211,7 +211,7 @@ namespace maqueen {
         } else {
             return -1
         }
-    }*/
+    }
 
     //% weight=20
     //% blockId=writeLED block="led|%led|ledswitch|%ledswitch"
@@ -231,7 +231,7 @@ namespace maqueen {
     //% blockId=servo_ServoRun block="Servo|%index|angle|%angle"
     //% angle.min=0 angle.max=180
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
-    /*export function ServoRun(index: aServos, angle: number): void {
+    export function ServoRun(index: aServos, angle: number): void {
         let buf = pins.createBuffer(2);
         if (index == 0) {
             buf[0] = 0x14;
@@ -242,5 +242,5 @@ namespace maqueen {
         buf[1] = angle;
         pins.i2cWriteBuffer(0x10, buf);
     }
-    */
+    
 }
