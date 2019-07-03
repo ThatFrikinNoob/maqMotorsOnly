@@ -1,60 +1,60 @@
 #include "pxt.h"
 
 enum class DigitalPin {
-    P0 = MICROBIT_ID_IO_P0,
-    P1 = MICROBIT_ID_IO_P1,
-    P2 = MICROBIT_ID_IO_P2,
-    P3 = MICROBIT_ID_IO_P3,
-    P4 = MICROBIT_ID_IO_P4,
-    P5 = MICROBIT_ID_IO_P5,
-    P6 = MICROBIT_ID_IO_P6,
-    P7 = MICROBIT_ID_IO_P7,
-    P8 = MICROBIT_ID_IO_P8,
-    P9 = MICROBIT_ID_IO_P9,
-    P10 = MICROBIT_ID_IO_P10,
-    P11 = MICROBIT_ID_IO_P11,
-    P12 = MICROBIT_ID_IO_P12,
-    P13 = MICROBIT_ID_IO_P13,
-    P14 = MICROBIT_ID_IO_P14,
-    P15 = MICROBIT_ID_IO_P15,
-    P16 = MICROBIT_ID_IO_P16,
-    P19 = MICROBIT_ID_IO_P19,
-    P20 = MICROBIT_ID_IO_P20,
+    P0 = DEVICE_ID_IO_P0,
+    P1 = DEVICE_ID_IO_P1,
+    P2 = DEVICE_ID_IO_P2,
+    P3 = DEVICE_ID_IO_P3,
+    P4 = DEVICE_ID_IO_P4,
+    P5 = DEVICE_ID_IO_P5,
+    P6 = DEVICE_ID_IO_P6,
+    P7 = DEVICE_ID_IO_P7,
+    P8 = DEVICE_ID_IO_P8,
+    P9 = DEVICE_ID_IO_P9,
+    P10 = DEVICE_ID_IO_P10,
+    P11 = DEVICE_ID_IO_P11,
+    P12 = DEVICE_ID_IO_P12,
+    P13 = DEVICE_ID_IO_P13,
+    P14 = DEVICE_ID_IO_P14,
+    P15 = DEVICE_ID_IO_P15,
+    P16 = DEVICE_ID_IO_P16,
+    P19 = DEVICE_ID_IO_P19,
+    P20 = DEVICE_ID_IO_P20,
 };
 
 enum class AnalogPin {
-    P0 = MICROBIT_ID_IO_P0,
-    P1 = MICROBIT_ID_IO_P1,
-    P2 = MICROBIT_ID_IO_P2,
-    P3 = MICROBIT_ID_IO_P3,
-    P4 = MICROBIT_ID_IO_P4,
-    P10 = MICROBIT_ID_IO_P10,
+    P0 = DEVICE_ID_IO_P0,
+    P1 = DEVICE_ID_IO_P1,
+    P2 = DEVICE_ID_IO_P2,
+    P3 = DEVICE_ID_IO_P3,
+    P4 = DEVICE_ID_IO_P4,
+    P10 = DEVICE_ID_IO_P10,
     //% block="P5 (write only)"
-    P5 = MICROBIT_ID_IO_P5,
+    P5 = DEVICE_ID_IO_P5,
     //% block="P6 (write only)"
-    P6 = MICROBIT_ID_IO_P6,
+    P6 = DEVICE_ID_IO_P6,
     //% block="P7 (write only)"
-    P7 = MICROBIT_ID_IO_P7,
+    P7 = DEVICE_ID_IO_P7,
     //% block="P8 (write only)"
-    P8 = MICROBIT_ID_IO_P8,
+    P8 = DEVICE_ID_IO_P8,
     //% block="P9 (write only)"
-    P9 = MICROBIT_ID_IO_P9,
+    P9 = DEVICE_ID_IO_P9,
     //% block="P11 (write only)"
-    P11 = MICROBIT_ID_IO_P11,
+    P11 = DEVICE_ID_IO_P11,
     //% block="P12 (write only)"
-    P12 = MICROBIT_ID_IO_P12,
+    P12 = DEVICE_ID_IO_P12,
     //% block="P13 (write only)"
-    P13 = MICROBIT_ID_IO_P13,
+    P13 = DEVICE_ID_IO_P13,
     //% block="P14 (write only)"
-    P14 = MICROBIT_ID_IO_P14,
+    P14 = DEVICE_ID_IO_P14,
     //% block="P15 (write only)"
-    P15 = MICROBIT_ID_IO_P15,
+    P15 = DEVICE_ID_IO_P15,
     //% block="P16 (write only)"
-    P16 = MICROBIT_ID_IO_P16,
+    P16 = DEVICE_ID_IO_P16,
     //% block="P19 (write only)"
-    P19 = MICROBIT_ID_IO_P19,
+    P19 = DEVICE_ID_IO_P19,
     //% block="P20 (write only)"
-    P20 = MICROBIT_ID_IO_P20
+    P20 = DEVICE_ID_IO_P20
 };
 
 enum class PulseValue {
@@ -75,39 +75,39 @@ enum class PinPullMode {
 
 enum class PinEventType {
     //% block="edge"
-    Edge = MICROBIT_PIN_EVENT_ON_EDGE,
+    Edge = DEVICE_PIN_EVENT_ON_EDGE,
     //% block="pulse"
-    Pulse = MICROBIT_PIN_EVENT_ON_PULSE,
+    Pulse = DEVICE_PIN_EVENT_ON_PULSE,
     //% block="touch"
-    Touch = MICROBIT_PIN_EVENT_ON_TOUCH,
+    Touch = DEVICE_PIN_EVENT_ON_TOUCH,
     //% block="none"
-    None = MICROBIT_PIN_EVENT_NONE
+    None = DEVICE_PIN_EVENT_NONE
 };
 
 
 namespace pxt
 {
-MicroBitPin *getPin(int id) {
+DevicePin *getPin(int id) {
     switch (id) {
-        case MICROBIT_ID_IO_P0: return &uBit.io.P0;
-        case MICROBIT_ID_IO_P1: return &uBit.io.P1;
-        case MICROBIT_ID_IO_P2: return &uBit.io.P2;
-        case MICROBIT_ID_IO_P3: return &uBit.io.P3;
-        case MICROBIT_ID_IO_P4: return &uBit.io.P4;
-        case MICROBIT_ID_IO_P5: return &uBit.io.P5;
-        case MICROBIT_ID_IO_P6: return &uBit.io.P6;
-        case MICROBIT_ID_IO_P7: return &uBit.io.P7;
-        case MICROBIT_ID_IO_P8: return &uBit.io.P8;
-        case MICROBIT_ID_IO_P9: return &uBit.io.P9;
-        case MICROBIT_ID_IO_P10: return &uBit.io.P10;
-        case MICROBIT_ID_IO_P11: return &uBit.io.P11;
-        case MICROBIT_ID_IO_P12: return &uBit.io.P12;
-        case MICROBIT_ID_IO_P13: return &uBit.io.P13;
-        case MICROBIT_ID_IO_P14: return &uBit.io.P14;
-        case MICROBIT_ID_IO_P15: return &uBit.io.P15;
-        case MICROBIT_ID_IO_P16: return &uBit.io.P16;
-        case MICROBIT_ID_IO_P19: return &uBit.io.P19;
-        case MICROBIT_ID_IO_P20: return &uBit.io.P20;
+        case DEVICE_ID_IO_P0: return &uBit.io.P0;
+        case DEVICE_ID_IO_P1: return &uBit.io.P1;
+        case DEVICE_ID_IO_P2: return &uBit.io.P2;
+        case DEVICE_ID_IO_P3: return &uBit.io.P3;
+        case DEVICE_ID_IO_P4: return &uBit.io.P4;
+        case DEVICE_ID_IO_P5: return &uBit.io.P5;
+        case DEVICE_ID_IO_P6: return &uBit.io.P6;
+        case DEVICE_ID_IO_P7: return &uBit.io.P7;
+        case DEVICE_ID_IO_P8: return &uBit.io.P8;
+        case DEVICE_ID_IO_P9: return &uBit.io.P9;
+        case DEVICE_ID_IO_P10: return &uBit.io.P10;
+        case DEVICE_ID_IO_P11: return &uBit.io.P11;
+        case DEVICE_ID_IO_P12: return &uBit.io.P12;
+        case DEVICE_ID_IO_P13: return &uBit.io.P13;
+        case DEVICE_ID_IO_P14: return &uBit.io.P14;
+        case DEVICE_ID_IO_P15: return &uBit.io.P15;
+        case DEVICE_ID_IO_P16: return &uBit.io.P16;
+        case DEVICE_ID_IO_P19: return &uBit.io.P19;
+        case DEVICE_ID_IO_P20: return &uBit.io.P20;
         default: return NULL;
     }
 }
@@ -116,18 +116,18 @@ MicroBitPin *getPin(int id) {
 
 namespace pins {
     #define PINOP(op) \
-      MicroBitPin *pin = getPin((int)name); \
+      DevicePin *pin = getPin((int)name); \
       if (!pin) return; \
       pin->op
 
     #define PINREAD(op) \
-      MicroBitPin *pin = getPin((int)name); \
+      DevicePin *pin = getPin((int)name); \
       if (!pin) return 0; \
       return pin->op
 
 
     //%
-    MicroBitPin *getPinAddress(int id) {
+    DevicePin *getPinAddress(int id) {
         return getPin(id);
     }
 
@@ -207,7 +207,7 @@ namespace pins {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
     void onPulsed(DigitalPin name, PulseValue pulse, Action body) {
-        MicroBitPin* pin = getPin((int)name);
+        DevicePin* pin = getPin((int)name);
         if (!pin) return;
 
         pin->eventOn(MICROBIT_PIN_EVENT_ON_PULSE);
@@ -236,7 +236,7 @@ namespace pins {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% name.fieldOptions.tooltips="false" name.fieldOptions.width="250"
     int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
-        MicroBitPin* pin = getPin((int)name);
+        DevicePin* pin = getPin((int)name);
         if (!pin) return 0;
 
         int pulse = value == PulseValue::High ? 1 : 0;
@@ -285,7 +285,7 @@ namespace pins {
     }
 
 
-    MicroBitPin* pitchPin = NULL;
+    DevicePin* pitchPin = NULL;
 
     /**
      * Set the pin used when using analog pitch or music.
