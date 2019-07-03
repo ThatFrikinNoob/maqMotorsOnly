@@ -159,7 +159,7 @@ namespace maqueen {
     //% speed.min=0 speed.max=255
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
     //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
- need this export function MotorRun(index: aMotors, direction: Dir, speed: number): void {
+    export function MotorRun(index: aMotors, direction: Dir, speed: number): void {
         let buf = pins.createBuffer(3);
         if (index == 0) {
             buf[0] = 0x00;
