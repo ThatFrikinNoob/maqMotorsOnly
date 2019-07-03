@@ -1,67 +1,67 @@
 #include "pxt.h"
 
 enum class DigitalPin {
-    P0 = DEVICE_ID_IO_P0,
-    P1 = DEVICE_ID_IO_P1,
-    P2 = DEVICE_ID_IO_P2,
-    P3 = DEVICE_ID_IO_P3,
-    P4 = DEVICE_ID_IO_P4,
-    P5 = DEVICE_ID_IO_P5,
-    P6 = DEVICE_ID_IO_P6,
-    P7 = DEVICE_ID_IO_P7,
-    P8 = DEVICE_ID_IO_P8,
-    P9 = DEVICE_ID_IO_P9,
-    P10 = DEVICE_ID_IO_P10,
-    P11 = DEVICE_ID_IO_P11,
-    P12 = DEVICE_ID_IO_P12,
-    P13 = DEVICE_ID_IO_P13,
-    P14 = DEVICE_ID_IO_P14,
-    P15 = DEVICE_ID_IO_P15,
-    P16 = DEVICE_ID_IO_P16,
-    P19 = DEVICE_ID_IO_P19,
-    P20 = DEVICE_ID_IO_P20,
+    P0 = &uBit.io.P0,
+    P1 = &uBit.io.P1,
+    P2 = &uBit.io.P2,
+    P3 = &uBit.io.P3,
+    P4 = &uBit.io.P4,
+    P5 = &uBit.io.P5,
+    P6 = &uBit.io.P6,
+    P7 = &uBit.io.P7,
+    P8 = &uBit.io.P8,
+    P9 = &uBit.io.P9,
+    P10 = &uBit.io.P10,
+    P11 = &uBit.io.P11,
+    P12 = &uBit.io.P12,
+    P13 = &uBit.io.P13,
+    P14 = &uBit.io.P14,
+    P15 = &uBit.io.P15,
+    P16 = &uBit.io.P16,
+    P19 = &uBit.io.P19,
+    P20 = &uBit.io.P20,
 };
 
 enum class AnalogPin {
-    P0 = DEVICE_ID_IO_P0,
-    P1 = DEVICE_ID_IO_P1,
-    P2 = DEVICE_ID_IO_P2,
-    P3 = DEVICE_ID_IO_P3,
-    P4 = DEVICE_ID_IO_P4,
-    P10 = DEVICE_ID_IO_P10,
+    P0 = &uBit.io.P0,
+    P1 = &uBit.io.P1,
+    P2 = &uBit.io.P2,
+    P3 = &uBit.io.P3,
+    P4 = &uBit.io.P4,
+    P10 = &uBit.io.P10,
     //% block="P5 (write only)"
-    P5 = DEVICE_ID_IO_P5,
+    P5 = &uBit.io.P5,
     //% block="P6 (write only)"
-    P6 = DEVICE_ID_IO_P6,
+    P6 = &uBit.io.P6,
     //% block="P7 (write only)"
-    P7 = DEVICE_ID_IO_P7,
+    P7 = &uBit.io.P7,
     //% block="P8 (write only)"
-    P8 = DEVICE_ID_IO_P8,
+    P8 = &uBit.io.P8,
     //% block="P9 (write only)"
-    P9 = DEVICE_ID_IO_P9,
+    P9 = &uBit.io.P9,
     //% block="P11 (write only)"
-    P11 = DEVICE_ID_IO_P11,
+    P11 = &uBit.io.P11,
     //% block="P12 (write only)"
-    P12 = DEVICE_ID_IO_P12,
+    P12 = &uBit.io.P12,
     //% block="P13 (write only)"
-    P13 = DEVICE_ID_IO_P13,
+    P13 = &uBit.io.P13,
     //% block="P14 (write only)"
-    P14 = DEVICE_ID_IO_P14,
+    P14 = &uBit.io.P14,
     //% block="P15 (write only)"
-    P15 = DEVICE_ID_IO_P15,
+    P15 = &uBit.io.P15,
     //% block="P16 (write only)"
-    P16 = DEVICE_ID_IO_P16,
+    P16 = &uBit.io.P16,
     //% block="P19 (write only)"
-    P19 = DEVICE_ID_IO_P19,
+    P19 = &uBit.io.P19,
     //% block="P20 (write only)"
-    P20 = DEVICE_ID_IO_P20
+    P20 = &uBit.io.P20
 };
 
 enum class PulseValue {
     //% block=high
-    High = MICROBIT_PIN_EVT_PULSE_HI,
+    High = DEVICE_PIN_EVT_PULSE_HI,
     //% block=low
-    Low = MICROBIT_PIN_EVT_PULSE_LO
+    Low = DEVICE_PIN_EVT_PULSE_LO
 };
 
 enum class PinPullMode {
@@ -89,25 +89,25 @@ namespace pxt
 {
 DevicePin *getPin(int id) {
     switch (id) {
-        case DEVICE_ID_IO_P0: return &uBit.io.P0;
-        case DEVICE_ID_IO_P1: return &uBit.io.P1;
-        case DEVICE_ID_IO_P2: return &uBit.io.P2;
-        case DEVICE_ID_IO_P3: return &uBit.io.P3;
-        case DEVICE_ID_IO_P4: return &uBit.io.P4;
-        case DEVICE_ID_IO_P5: return &uBit.io.P5;
-        case DEVICE_ID_IO_P6: return &uBit.io.P6;
-        case DEVICE_ID_IO_P7: return &uBit.io.P7;
-        case DEVICE_ID_IO_P8: return &uBit.io.P8;
-        case DEVICE_ID_IO_P9: return &uBit.io.P9;
-        case DEVICE_ID_IO_P10: return &uBit.io.P10;
-        case DEVICE_ID_IO_P11: return &uBit.io.P11;
-        case DEVICE_ID_IO_P12: return &uBit.io.P12;
-        case DEVICE_ID_IO_P13: return &uBit.io.P13;
-        case DEVICE_ID_IO_P14: return &uBit.io.P14;
-        case DEVICE_ID_IO_P15: return &uBit.io.P15;
-        case DEVICE_ID_IO_P16: return &uBit.io.P16;
-        case DEVICE_ID_IO_P19: return &uBit.io.P19;
-        case DEVICE_ID_IO_P20: return &uBit.io.P20;
+        case &uBit.io.P0: return &uBit.io.P0;
+        case &uBit.io.P1: return &uBit.io.P1;
+        case &uBit.io.P2: return &uBit.io.P2;
+        case &uBit.io.P3: return &uBit.io.P3;
+        case &uBit.io.P4: return &uBit.io.P4;
+        case &uBit.io.P5: return &uBit.io.P5;
+        case &uBit.io.P6: return &uBit.io.P6;
+        case &uBit.io.P7: return &uBit.io.P7;
+        case &uBit.io.P8: return &uBit.io.P8;
+        case &uBit.io.P9: return &uBit.io.P9;
+        case &uBit.io.P10: return &uBit.io.P10;
+        case &uBit.io.P11: return &uBit.io.P11;
+        case &uBit.io.P12: return &uBit.io.P12;
+        case &uBit.io.P13: return &uBit.io.P13;
+        case &uBit.io.P14: return &uBit.io.P14;
+        case &uBit.io.P15: return &uBit.io.P15;
+        case &uBit.io.P16: return &uBit.io.P16;
+        case &uBit.io.P19: return &uBit.io.P19;
+        case &uBit.io.P20: return &uBit.io.P20;
         default: return NULL;
     }
 }
