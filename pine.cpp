@@ -1,60 +1,60 @@
 #include "pxt.h"
 
 enum class DigitalPin {
-    P0 = &uBit.io.P0,
-    P1 = &uBit.io.P1,
-    P2 = &uBit.io.P2,
-    P3 = &uBit.io.P3,
-    P4 = &uBit.io.P4,
-    P5 = &uBit.io.P5,
-    P6 = &uBit.io.P6,
-    P7 = &uBit.io.P7,
-    P8 = &uBit.io.P8,
-    P9 = &uBit.io.P9,
-    P10 = &uBit.io.P10,
-    P11 = &uBit.io.P11,
-    P12 = &uBit.io.P12,
-    P13 = &uBit.io.P13,
-    P14 = &uBit.io.P14,
-    P15 = &uBit.io.P15,
-    P16 = &uBit.io.P16,
-    P19 = &uBit.io.P19,
-    P20 = &uBit.io.P20,
+    P0 = 3,
+    P1 = 2,
+    P2 = 1,
+    P3 = 4,
+    P4 = 5,
+    P5 = 17,
+    P6 = 12,
+    P7 = 11,
+    P8 = 18,
+    P9 = 10,
+    P10 = 6,
+    P11 = 26,
+    P12 = 20,
+    P13 = 23,
+    P14 = 22,
+    P15 = 21,
+    P16 = 16,
+    P19 = 0,
+    P20 = 30
 };
 
 enum class AnalogPin {
-    P0 = &uBit.io.P0,
-    P1 = &uBit.io.P1,
-    P2 = &uBit.io.P2,
-    P3 = &uBit.io.P3,
-    P4 = &uBit.io.P4,
-    P10 = &uBit.io.P10,
+    P0 = 3,
+    P1 = 2,
+    P2 = 1,
+    P3 = 4,
+    P4 = 5,
+    P10 = 6,
     //% block="P5 (write only)"
-    P5 = &uBit.io.P5,
+    P5 = 17,
     //% block="P6 (write only)"
-    P6 = &uBit.io.P6,
+    P6 = 12,
     //% block="P7 (write only)"
-    P7 = &uBit.io.P7,
+    P7 = 11,
     //% block="P8 (write only)"
-    P8 = &uBit.io.P8,
+    P8 = 18,
     //% block="P9 (write only)"
-    P9 = &uBit.io.P9,
+    P9 = 10,
     //% block="P11 (write only)"
-    P11 = &uBit.io.P11,
+    P11 = 26,
     //% block="P12 (write only)"
-    P12 = &uBit.io.P12,
+    P12 = 20,
     //% block="P13 (write only)"
-    P13 = &uBit.io.P13,
+    P13 = 23,
     //% block="P14 (write only)"
-    P14 = &uBit.io.P14,
+    P14 = 22,
     //% block="P15 (write only)"
-    P15 = &uBit.io.P15,
+    P15 = 21,
     //% block="P16 (write only)"
-    P16 = &uBit.io.P16,
+    P16 = 16,
     //% block="P19 (write only)"
-    P19 = &uBit.io.P19,
+    P19 = 0,
     //% block="P20 (write only)"
-    P20 = &uBit.io.P20
+    P20 = 30
 };
 
 enum class PulseValue {
@@ -89,25 +89,25 @@ namespace pxt
 {
 DevicePin *getPin(int id) {
     switch (id) {
-        case &uBit.io.P0: return &uBit.io.P0;
-        case &uBit.io.P1: return &uBit.io.P1;
-        case &uBit.io.P2: return &uBit.io.P2;
-        case &uBit.io.P3: return &uBit.io.P3;
-        case &uBit.io.P4: return &uBit.io.P4;
-        case &uBit.io.P5: return &uBit.io.P5;
-        case &uBit.io.P6: return &uBit.io.P6;
-        case &uBit.io.P7: return &uBit.io.P7;
-        case &uBit.io.P8: return &uBit.io.P8;
-        case &uBit.io.P9: return &uBit.io.P9;
-        case &uBit.io.P10: return &uBit.io.P10;
-        case &uBit.io.P11: return &uBit.io.P11;
-        case &uBit.io.P12: return &uBit.io.P12;
-        case &uBit.io.P13: return &uBit.io.P13;
-        case &uBit.io.P14: return &uBit.io.P14;
-        case &uBit.io.P15: return &uBit.io.P15;
-        case &uBit.io.P16: return &uBit.io.P16;
-        case &uBit.io.P19: return &uBit.io.P19;
-        case &uBit.io.P20: return &uBit.io.P20;
+        case 3: return &uBit.io.P0;
+        case 2: return &uBit.io.P1;
+        case 1: return &uBit.io.P2;
+        case 4: return &uBit.io.P3;
+        case 5: return &uBit.io.P4;
+        case 17: return &uBit.io.P5;
+        case 12: return &uBit.io.P6;
+        case 11: return &uBit.io.P7;
+        case 18: return &uBit.io.P8;
+        case 10: return &uBit.io.P9;
+        case 6: return &uBit.io.P10;
+        case 26: return &uBit.io.P11;
+        case 20: return &uBit.io.P12;
+        case 23: return &uBit.io.P13;
+        case 22: return &uBit.io.P14;
+        case 21: return &uBit.io.P15;
+        case 16: return &uBit.io.P16;
+        case 0: return &uBit.io.P19;
+        case 30: return &uBit.io.P20;
         default: return NULL;
     }
 }
@@ -210,7 +210,7 @@ namespace pins {
         DevicePin* pin = getPin((int)name);
         if (!pin) return;
 
-        pin->eventOn(MICROBIT_PIN_EVENT_ON_PULSE);
+        pin->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
         registerWithDal((int)name, (int)pulse, body);
     }
 
