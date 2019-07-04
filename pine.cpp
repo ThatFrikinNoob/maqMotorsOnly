@@ -114,16 +114,16 @@ DevicePin *getPin(int id) {
 
 } // pxt
 
-namespace pins {
+namespace pine {
     #define PINOP(op) \
-      DevicePin *pin = getPin((int)name); \
-      if (!pin) return; \
-      pin->op
+      DevicePin *pine = getPin((int)name); \
+      if (!pine) return; \
+      pine->op
 
     #define PINREAD(op) \
-      DevicePin *pin = getPin((int)name); \
-      if (!pin) return 0; \
-      return pin->op
+      DevicePin *pine = getPin((int)name); \
+      if (!pine) return 0; \
+      return pine->op
 
 
     //%
@@ -207,10 +207,10 @@ namespace pins {
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=4
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
     void onPulsed(DigitalPin name, PulseValue pulse, Action body) {
-        DevicePin* pin = getPin((int)name);
-        if (!pin) return;
+        DevicePin* pine = getPin((int)name);
+        if (!pine) return;
 
-        pin->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
+        pine->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
         registerWithDal((int)name, (int)pulse, body);
     }
 
@@ -236,19 +236,19 @@ namespace pins {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% name.fieldOptions.tooltips="false" name.fieldOptions.width="250"
     int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
-        DevicePin* pin = getPin((int)name);
-        if (!pin) return 0;
+        DevicePin* pine = getPin((int)name);
+        if (!pine) return 0;
 
         int pulse = value == PulseValue::High ? 1 : 0;
         uint64_t tick =  system_timer_current_time_us();
         uint64_t maxd = (uint64_t)maxDuration;
-        while(pin->getDigitalValue() != pulse) {
+        while(pine->getDigitalValue() != pulse) {
             if(system_timer_current_time_us() - tick > maxd)
                 return 0;
         }
 
         uint64_t start =  system_timer_current_time_us();
-        while(pin->getDigitalValue() == pulse) {
+        while(pine->getDigitalValue() == pulse) {
             if(system_timer_current_time_us() - tick > maxd)
                 return 0;
         }
