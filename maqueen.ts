@@ -20,7 +20,8 @@ namespace maqueen {
         public mye: string;
         public myparam: number;
     }
-    */
+*/
+/*
     export enum aMotors {
         //% blockId="M1" block="M1"
         M1 = 0,
@@ -48,6 +49,7 @@ namespace maqueen {
         //% blockId="PatrolRight" block="PatrolRight"
         PatrolRight = 14
     }
+*/
 /*
     export enum LED {
         //% blockId="LEDLeft" block="LEDLeft"
@@ -153,7 +155,7 @@ namespace maqueen {
             default: return d;
         }
     }*/
-
+/*
     //% weight=90
     //% blockId=motor_MotorRun block="Motor|%index|dir|%Dir|speed|%speed"
     //% speed.min=0 speed.max=255
@@ -226,7 +228,7 @@ namespace maqueen {
             return
         }
     }*/
-
+    /*
     //% weight=90
     //% blockId=servo_ServoRun block="Servo|%index|angle|%angle"
     //% angle.min=0 angle.max=180
@@ -242,5 +244,5 @@ namespace maqueen {
         buf[1] = angle;
         pins.i2cWriteBuffer(0x10, buf);
     }
-    
+    */
 }
