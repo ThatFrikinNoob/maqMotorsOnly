@@ -90,7 +90,7 @@ namespace pxt
 {
 DevicePin *getPin(int id) {
     switch (id) {
-        case 3: return &uBit.io.P0;
+        /*case 3: return &uBit.io.P0;
         case 2: return &uBit.io.P1;
         case 1: return &uBit.io.P2;
         case 4: return &uBit.io.P3;
@@ -108,7 +108,7 @@ DevicePin *getPin(int id) {
         case 21: return &uBit.io.P15;
         case 16: return &uBit.io.P16;
         case 0: return &uBit.io.P19;
-        case 30: return &uBit.io.P20;
+        case 30: return &uBit.io.P20;*/
         default: return NULL;
     }
 }
