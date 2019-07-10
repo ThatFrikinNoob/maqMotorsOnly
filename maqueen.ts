@@ -21,21 +21,21 @@ namespace maqueen {
         public myparam: number;
     }
 */
-/*
+
     export enum aMotors {
         //% blockId="M1" block="M1"
         M1 = 0,
         //% blockId="M2" block="M2"
         M2 = 1
     }
-
+/*
     export enum aServos {
         //% blockId="S1" block="S1"
         S1 = 0,
         //% blockId="S2" block="S2"
         S2 = 1
     }
-
+*/
     export enum Dir {
         //% blockId="CW" block="CW"
         CW = 0x0,
@@ -49,7 +49,7 @@ namespace maqueen {
         //% blockId="PatrolRight" block="PatrolRight"
         PatrolRight = 14
     }
-*/
+
 /*
     export enum LED {
         //% blockId="LEDLeft" block="LEDLeft"
@@ -155,7 +155,7 @@ namespace maqueen {
             default: return d;
         }
     }*/
-/*
+
     //% weight=90
     //% blockId=motor_MotorRun block="Motor|%index|dir|%Dir|speed|%speed"
     //% speed.min=0 speed.max=255
