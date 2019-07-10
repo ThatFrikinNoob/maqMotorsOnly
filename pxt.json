@@ -11,6 +11,7 @@
         "enums.d.ts",
         "pine.cpp",
         "pine.h",
+        "pinscompat.ts",
         "_locales/zh/maqueen-strings.json"
     ],
     "testFiles": [
