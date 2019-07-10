@@ -15,7 +15,7 @@ enum PingUnit {
 
 //% weight=10 color=#008B00 icon="\uf136" block="maqueen"
 namespace maqueen {
-    /*
+ /*
     export class Packeta {
         public mye: string;
         public myparam: number;
@@ -42,14 +42,14 @@ namespace maqueen {
         //% blockId="CCW" block="CCW"
         CCW = 0x1
     }
-
+/*
     export enum Patrol {
         //% blockId="PatrolLeft" block="PatrolLeft"
         PatrolLeft = 13,
         //% blockId="PatrolRight" block="PatrolRight"
         PatrolRight = 14
     }
-
+*/
 /*
     export enum LED {
         //% blockId="LEDLeft" block="LEDLeft"
@@ -205,7 +205,7 @@ namespace maqueen {
     //% weight=20
     //% blockId=read_Patrol block="Read Patrol|%patrol"
     //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=2 
-    export function readPatrol(patrol: Patrol): number {
+    /*export function readPatrol(patrol: Patrol): number {
         if (patrol == Patrol.PatrolLeft) {
             return pins.digitalReadPin(20)
         } else if (patrol == Patrol.PatrolRight) {
@@ -214,7 +214,7 @@ namespace maqueen {
             return -1
         }
     }
-
+*/
     //% weight=20
     //% blockId=writeLED block="led|%led|ledswitch|%ledswitch"
     //% led.fieldEditor="gridpicker" led.fieldOptions.columns=2 
