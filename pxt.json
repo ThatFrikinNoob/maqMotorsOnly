@@ -8,9 +8,6 @@
     },
     "files": [
         "maqueen.ts",
-        "enums.d.ts",
-        "pine.cpp",
-        "pine.h",
         "_locales/zh/maqueen-strings.json"
     ],
     "testFiles": [
