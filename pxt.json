@@ -8,6 +8,7 @@
     },
     "files": [
         "maqueen.ts",
+        "enums.d.ts",
         "_locales/zh/maqueen-strings.json"
     ],
     "testFiles": [
