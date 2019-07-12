@@ -51,7 +51,7 @@ namespace maqueen {
     //% weight=20
     //% blockId=motor_motorStop block="Motor stop|%motors"
     //% motors.fieldEditor="gridpicker" motors.fieldOptions.columns=2 
-    export function motorStop(motors: aMotors): void {
+    /*export function motorStop(motors: aMotors): void {
         let buf = pins.createBuffer(3);
         if (motors == 0) {
             buf[0] = 0x00;
@@ -63,7 +63,7 @@ namespace maqueen {
         buf[2] = 0;
         pins.i2cWriteBuffer(0x10, buf);
     }
-
+*/
     //% weight=10
     //% blockId=motor_motorStopAll block="Motor Stop All"
     export function motorStopAll(): void {
