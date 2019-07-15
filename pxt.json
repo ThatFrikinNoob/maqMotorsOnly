@@ -1,7 +1,7 @@
 {
     "name": "maqMotorControl",
     "version": "0.0.1",
-    "description": "Affordable mini robot designed by DFRobot",
+    "description": "isolated motor control for maqueen",
     "license": "MIT",
     "dependencies": {
         "core": "*"
