@@ -1,19 +1,4 @@
-let maqueencb: Action
-let maqueenmycb: Action
-let maqueene = "1"
-let maqueenparam = 0
-let alreadyInit = 0
-let IrPressEvent = 0
-const MOTER_ADDRESSS = 0x10
-
-enum PingUnit {
-    //% block="cm"
-    Centimeters,
-    //% block="μs"
-    MicroSeconds
-}
-
-//% weight=10 color=#008B00 icon="\uf136" block="maqueen"
+//% weight=10 color=#FF0000 icon="\uf136" block="maqMotors"
 namespace maqueen {
 
     export enum aMotors {
@@ -30,7 +15,7 @@ namespace maqueen {
         CCW = 0x1
     }
 
-    //% weight=90
+    //% weight=10
     //% blockId=motor_MotorRun block="Motor|%index|dir|%Dir|speed|%speed"
     //% speed.min=0 speed.max=255
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
@@ -64,7 +49,7 @@ namespace maqueen {
         pins.i2cWriteBuffer(0x10, buf);
     }
 
-    //% weight=10
+    //% weight=5
     //% blockId=motor_motorStopAll block="Motor Stop All"
     export function motorStopAll(): void {
         let buf = pins.createBuffer(3);
