@@ -15,7 +15,7 @@ namespace maqueen {
         CCW = 0x1
     }
 
-    //% weight=10
+    //% weight=90
     //% blockId=motor_MotorRun block="Motor|%index|dir|%Dir|speed|%speed"
     //% speed.min=0 speed.max=255
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
